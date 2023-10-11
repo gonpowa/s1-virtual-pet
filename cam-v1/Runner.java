@@ -15,6 +15,8 @@ public class Runner {
         p.feed();
 
         p.exercise();
+
+        p.dunk();
     }
 
     public String getResponse(String q) {
