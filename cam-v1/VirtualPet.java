@@ -10,13 +10,20 @@ public class VirtualPet {
     private int tiredness = 0;
     private int score = 0;
     
+    
     // constructor
     public VirtualPet() {
         face = new VirtualPetFace();
-        face.setImage("normal");
-        face.setMessage("Hello.");
     }
     
+    public void takeABeat(int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        }  catch(Exception e){
+
+        }
+    }
+
     public void feed() {
         if (hunger > 10) {
             hunger = hunger - 10;
@@ -42,21 +49,46 @@ public class VirtualPet {
         face.setImage("asleep");
     }
 
-    public void shoot(){
-        score = score + 3;
-        face.setMessage("The score is now " + score + "!");
-        face.setImage("swish");
+    public void godzillaShoot2(){
+        face.setImage("gshoots");
+        face.setMessage("He shoots!");
+        takeABeat(2000);
+        int shot = (int)(Math.random()*3)+1; //1 - 3
+        if(shot == 1 || shot == 2) {
+            score = score + 2;
+            face.setMessage("He sinks it! The score is now " + score + ".");
+            face.setImage("swish"); 
+        } else {
+            score = score + 0;
+            face.setMessage("He missed! The score stays at " + score + ".");
+            face.setImage("miss"); 
+        }
     }
 
-    public void miss(){
-        face.setMessage("Oh shit he missed!");
-        face.setImage("miss");
+    public void godzillaShoot3(){
+        face.setImage("gshoots");
+        face.setMessage("He shoots!");
+        takeABeat(2000);
+        int shot = (int)(Math.random()*2)+1; //1 - 2
+        if(shot == 1){
+            score = score + 3;
+            face.setMessage("He sinks a 3! The score is now " + score + ".");
+            face.setImage("swish"); 
+        } else {
+            score = score + 0;
+            face.setMessage("He missed! The score stays at " + score + ".");
+            face.setImage("miss");
+        }
     }
 
     public void dunk(){
         score = score + 2;
         face.setMessage("The score is now " + score + "!");
         face.setImage("dunk");
+    }
+
+    public void gdribble(){
+        face.setImage("gdribble");
     }
 
     
