@@ -8,8 +8,13 @@ public class Runner {
         p.gdribble();
         takeABeat(2000);
         p.godzillaShoot3();
-        takeABeat(3000);
-        p.gdribble();
+        p.face.setImage("Barkley has the ball.");
+        takeABeat(1);
+        p.bdribble();
+        takeABeat(2999);
+        p.face.setMessage("Barkey dribbles past Godzilla, he sees the net.");
+        takeABeat(4000);
+        p.Barkleyscores();
         takeABeat(3000);
         // String ans = getResponse("How was your day?");
         // System.out.println(ans);
