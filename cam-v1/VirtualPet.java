@@ -149,6 +149,7 @@ public class VirtualPet {
     }
 
     public String getResponse(String q) {
+        JOptionPane.showMessageDialog(new JFrame(), q);
         String s = (String)JOptionPane.showInputDialog(
             new JFrame(),
             "Your Message",

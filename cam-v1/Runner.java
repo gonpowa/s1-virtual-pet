@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 public class Runner {
     public Runner(){
         VirtualPet p = new VirtualPet();
-        JOptionPane.showMessageDialog(new JFrame(), "Godzilla and Charles Barkley and playing each other in a basketball 1v1. Godzilla starts with the ball.");
+        JOptionPane.showMessageDialog(new JFrame(), "Godzilla and Charles Barkley are playing each other in a basketball 1v1. Godzilla starts with the ball.");
         p.gdribble();
         takeABeat(2000);
         p.godzillaShoot3();
@@ -21,6 +21,8 @@ public class Runner {
     }
 
     public String getResponse(String q) {
+        JOptionPane.showMessageDialog(new JFrame(), q);
+        
         String s = (String)JOptionPane.showInputDialog(
             new JFrame(),
             "Your Message",
